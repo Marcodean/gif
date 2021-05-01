@@ -1,0 +1,122 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css?family=Lemonada|Roboto');
+
+
+/* desktop */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #ffc0be;
+  font-family: 'Lemonada', 'cursive','sans-serif';
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 5px;
+  line-height: 60px;
+}
+
+p {
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  padding-top: 5px;
+  line-height: 40px;
+}
+
+
+.contenido {
+    position: relative;
+    top: 700px;
+    margin-top: 100px;
+}
+
+#prenda {
+  padding-top: 20px;
+}
+
+
+.fa-gift {
+  font-size: 160px;
+  color: #fff;
+  cursor: pointer;
+  animation: oferecer 4s linear infinite;
+}
+
+@keyframes oferecer {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.fa-heart {
+  font-size: 400px;
+  color: #f51455;
+
+  cursor: not-allowed;
+
+  animation: amor 1s linear infinite;
+}
+
+
+@keyframes amor {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+::selection {
+  background: #fff;
+  color: #ffc0be;
+}
+
+/* mobile */
+@media screen and (max-width: 800px) {
+  .conteudo {
+    margin-top: 70px;
+  }
+  h1 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .fa-heart {
+    font-size: 200px;
+    margin-top: 100px;
+  }
+}
+
+

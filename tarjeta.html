@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu 3D Restaurant</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <div class="contenedor-menu">
+       
+        <div class="pagina-izquierda">
+            
+            <div class="delante lado">
+                <h1 class="ella">Vamos Estefany</h1>
+                <hr>
+                <button class="btn-ver-menu" onclick="reproducir()">Abre la tarjeta</button>
+                <h4>Date prisa que a veces falla la tarjeta xd</h4>
+            </div>
+            
+            <div class="atras lado">
+                <div id="str" class="lado"></div>      
+            </div>
+            <div class="btn-cerrar lado-pagina-derecha" onclick="pausar()">X</div>
+           
+        </div>
+        <div class="pagina-central"></div> 
+    </div>  
+    <video autoplay muted Loop>
+        <source src="video.mp4">
+    </video>  
+    <audio id="audio" controls>
+        <source type="audio/mpeg" src="corazon.mp3">
+        </audio>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        var string = " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam accusantium numquam aliquid, asperiores, tempore ea optio suscipit veritatis id ullam est vero eum laboriosam eius quis vitae? Veritatis facilis iste at dolores laborum nisi nesciunt commodi, corrupti assumenda est unde quas odit ipsum harum molestiae aliquid. Recusandae laborum suscipit fugit.";
+        var str = string.split("");
+        var el = document.getElementById('str');
+        function animate() {
+        str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running); 
+        var running = setTimeout(animate, 150);
+        }
+        setTimeout(animate, 8000)
+       /*  (function animate() {
+        str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running); 
+        var running = setTimeout(animate, 150);
+        })(); */
+        function reproducir(){
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+        function pausar(){
+            var audio = document.getElementById("audio");
+            audio.pause();
+        }
+    </script>
+</body>
+</html>
